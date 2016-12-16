@@ -7,6 +7,11 @@ import Panel from '../dist/index.min';
 
 class Page extends React.Component {
   render() {
+
+    let _header = (
+      <h1>Custom Header</h1>
+    );
+
     return (
       <div className="panel-eg-container">
         <h1>Get-Set-Go Panel Component</h1>
@@ -48,6 +53,10 @@ class Page extends React.Component {
 
           <Panel footer="Footer">
             Panel with only footer
+          </Panel>
+
+          <Panel header={_header}>
+            Panel with Custom JSX header
           </Panel>
         </p>
 
