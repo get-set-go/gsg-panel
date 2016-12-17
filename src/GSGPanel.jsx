@@ -37,7 +37,9 @@ export default class GSGPanel extends React.Component {
 };
 
 GSGPanel.propTypes = {
-  bStyle: PropTypes.string
+  bStyle: PropTypes.string,
+  header: PropTypes.object,
+  footer: PropTypes.object
 };
 
 GSGPanel.defaultProps = {
