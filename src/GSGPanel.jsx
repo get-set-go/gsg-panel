@@ -5,16 +5,13 @@ import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 
 export default class GSGPanel extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    let _bStyle = 'default';
-    _bStyle = classNames({
+    let _bClass = {
       'panel': true,
       [`panel-${this.props.bStyle}`]: true
-    });
+    };
+
+    _bClass = classNames(_bClass);
 
     let _header = (
       <div className="panel-heading">{this.props.header}</div>
@@ -25,7 +22,7 @@ export default class GSGPanel extends React.Component {
     );
 
     return(
-      <div className={_bStyle}>
+      <div className={_bClass}>
         {this.props.header && _header}
         <div className="panel-body">
           {this.props.children}
